@@ -52,4 +52,14 @@ class MaintenanceRequest(models.Model):
         if self.equipment_id and self.equipment_id.project_id:
             self.project_id = self.equipment_id.project_id
 
-    # TODO account analytic line access??
+    def action_view_timesheet_ids(self):
+        self.ensure_one()
+        action = self.env.ref(
+            'maintenance_timesheet.timesheet_action_from_request').read()[0]
+        action['domain'] = [('maintenance_request_id', '=', self.id)]
+        action['context'] = {
+            'default_project_id': self.project_id.id,
+            'default_task_id': self.task_id.id,
+            'default_maintenance_request_id': self.id
+        }
+        return action

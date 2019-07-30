@@ -11,7 +11,7 @@
         "hr_timesheet",
     ],
     "data": [
-        # TODO hr_timesheet views??
+        "views/hr_timesheet.xml",
         "views/maintenance.xml",
     ],
     # TODO demo data
