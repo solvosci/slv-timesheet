@@ -40,6 +40,17 @@ class MaintenanceRequest(models.Model):
     timesheet_total_hours = fields.Float(
         compute='_compute_timesheet_total_hours')
 
+    def _add_followers(self):
+        """
+        Members of maintenance team are included as followers to automatically
+        grant request visibility and timesheet permissions for this request
+        """
+        super(MaintenanceRequest, self)._add_followers()
+        for request in self:
+            partner_ids = \
+                request.maintenance_team_id.member_ids.mapped('partner_id').ids
+            request.message_subscribe(partner_ids=partner_ids)
+
     @api.depends('timesheet_ids.unit_amount')
     def _compute_timesheet_total_hours(self):
         for request in self:

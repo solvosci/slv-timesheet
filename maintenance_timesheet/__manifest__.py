@@ -11,6 +11,7 @@
         "hr_timesheet",
     ],
     "data": [
+        "security/maintenance_timesheet.xml",
         "views/hr_timesheet.xml",
         "views/maintenance.xml",
     ],

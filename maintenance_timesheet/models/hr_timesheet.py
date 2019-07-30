@@ -4,7 +4,6 @@ from odoo import models, fields
 class AccountAnalyticLine(models.Model):
     _inherit = 'account.analytic.line'
 
-    maintenance_request_id = fields.Many2one(string='Maintenance request',
-                                             comodel_name='maintenance.request')
-
-    # TODO employee validation when maintenance_request id is filled
+    maintenance_request_id = fields.Many2one(
+        string='Maintenance request',
+        comodel_name='maintenance.request')

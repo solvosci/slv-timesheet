@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_maintenance_timesheet_maintenance_timesheet,maintenance_timesheet.maintenance_timesheet,model_maintenance_timesheet_maintenance_timesheet,,1,0,0,0

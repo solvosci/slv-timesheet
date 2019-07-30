@@ -40,10 +40,9 @@
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='kanban_state']" position="before">
+                <!-- TODO button looks bad. A button container ("oe_button_box") is needed -->
                 <button class="oe_stat_button" type="object" name="action_view_timesheet_ids" icon="fa-calendar">
-                    <div class="o_stat_info">
-                        <span class="o_stat_text">Timesheets</span>
-                    </div>
+                    <field name="timesheet_total_hours" widget="statinfo" string="Hour(s)"/>
                 </button>
             </xpath>
             <xpath expr="//field[@name='priority']" position="after">
@@ -54,8 +53,7 @@
     </record>
 
     <!-- TODO
-          * Kanban, calendar & tree views
-          * Request timesheet count and access
+          * Kanban, calendar & tree views (project, task, total hours)
       -->
 
 </odoo>
