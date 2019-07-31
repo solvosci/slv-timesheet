@@ -11,7 +11,7 @@
     <record id="timesheet_action_view_from_request_list" model="ir.actions.act_window.view">
         <field name="sequence" eval="5"/>
         <field name="view_mode">tree</field>
-        <field name="view_id" ref="hr_timesheet_line_tree"/>
+        <field name="view_id" ref="hr_timesheet.timesheet_view_tree_user"/>
         <field name="act_window_id" ref="timesheet_action_from_request"/>
     </record>
 
@@ -47,7 +47,8 @@
             </xpath>
             <xpath expr="//field[@name='priority']" position="after">
                 <field name="project_id" />
-                <field name="task_id" domain="[('project_id', '=', project_id)]"/>
+                <field name="task_id" domain="[('project_id', '=', project_id)]"
+                    context="{'default_project_id': project_id}"/>
             </xpath>
         </field>
     </record>
