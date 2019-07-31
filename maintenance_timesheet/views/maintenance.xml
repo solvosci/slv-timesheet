@@ -35,15 +35,29 @@
     </record>
 
     <!-- maintenance.request: view inheritance -->
+    <record id="hr_equipment_request_view_tree" model="ir.ui.view">
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree" />
+        <field name="arch" type="xml">
+            <field name="stage_id" position="after">
+                <field name="timesheet_total_hours" groups="maintenance.group_equipment_manager" widget="timesheet_uom"/>
+            </field>
+        </field>
+    </record>
+
     <record id="hr_equipment_request_view_form" model="ir.ui.view">
         <field name="model">maintenance.request</field>
         <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='kanban_state']" position="before">
-                <!-- TODO button looks bad. A button container ("oe_button_box") is needed -->
-                <button class="oe_stat_button" type="object" name="action_view_timesheet_ids" icon="fa-calendar">
-                    <field name="timesheet_total_hours" widget="statinfo" string="Hour(s)"/>
-                </button>
+            <xpath expr="//div[@class='oe_right']" position="replace">
+                <div class="oe_button_box" name="button_box">
+                    <button class="oe_stat_button" type="object" name="action_view_timesheet_ids" icon="fa-calendar">
+                        <field name="timesheet_total_hours" widget="statinfo" string="Hour(s)"/>
+                    </button>
+                </div>
+            </xpath>
+            <xpath expr="//div[@class='oe_title']" position="before">
+              <field name="kanban_state" class="oe_inline" widget="state_selection"/>
             </xpath>
             <xpath expr="//field[@name='priority']" position="after">
                 <field name="project_id" />
