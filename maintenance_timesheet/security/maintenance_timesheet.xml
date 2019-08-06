@@ -15,12 +15,12 @@
                 ]
             </field>
             <field name="perm_read" eval="1"/>
-            <field name="perm_create" eval="0"/>
-            <field name="perm_write" eval="0"/>
-            <field name="perm_unlink" eval="0"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
             <!-- TODO hr_timesheet.group_hr_timesheet_user should be a better restriction,
                       but it's not mandatory belonging to that group -->
-            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <!-- field name="groups" eval="[(4, ref('base.group_user'))]"/ -->
         </record>
     </data>
 </odoo>
