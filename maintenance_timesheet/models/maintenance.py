@@ -18,13 +18,6 @@ class MaintenanceEquipment(models.Model):
             values['project_id'] = new_project.id
         return super(MaintenanceEquipment, self).create(values)
 
-    def _create_new_request(self, date):
-        new_request = \
-            super(MaintenanceEquipment, self)._create_new_request(date)
-        if self.project_id and not new_request.project_id:
-            new_request.project_id = self.project_id
-        return new_request
-
 
 class MaintenanceRequest(models.Model):
     _inherit = 'maintenance.request'
@@ -50,6 +43,16 @@ class MaintenanceRequest(models.Model):
             partner_ids = \
                 request.maintenance_team_id.member_ids.mapped('partner_id').ids
             request.message_subscribe(partner_ids=partner_ids)
+
+    @api.model
+    def create(self, values):
+        """
+        If project is not filled, we force it with the equipment one
+        """
+        new_request = super().create(values)
+        if not new_request.project_id and new_request.equipment_id:
+            new_request.project_id = new_request.equipment_id.project_id
+        return new_request
 
     @api.depends('timesheet_ids.unit_amount')
     def _compute_timesheet_total_hours(self):
