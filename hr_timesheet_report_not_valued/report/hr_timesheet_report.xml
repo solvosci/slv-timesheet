@@ -1,0 +1,29 @@
+<odoo>
+    <template id="report_timesheet_not_valued_1" inherit_id="hr_timesheet.report_timesheet">
+        <xpath expr="//th[@class='text-right']" position="attributes">
+            <attribute name="t-if">not not_valued</attribute>
+        </xpath>
+        <xpath expr="//tbody/tr[1]/td[@class='text-right']" position="attributes">
+            <attribute name="t-if">not not_valued</attribute>
+        </xpath>
+        <xpath expr="//tbody/tr[2]/td[@class='text-right']" position="attributes">
+            <attribute name="t-if">not not_valued</attribute>
+        </xpath>
+        <xpath expr="//tbody/tr[2]/td[@class='text-right'][2]" position="attributes">
+            <attribute name="t-if">not not_valued</attribute>
+        </xpath>
+    </template>
+
+    <template id="report_timesheet_not_valued">
+        <t t-set="not_valued" t-value="True"/>
+        <t t-call="hr_timesheet.report_timesheet"/>
+    </template>
+
+    <report id="timesheet_not_valued_report"
+            model="account.analytic.line"
+            string="Timesheet Entries Not Valued"
+            report_type="qweb-pdf"
+            name="hr_timesheet_report_not_valued.report_timesheet_not_valued"
+            file="report_timesheet"
+    />
+</odoo>
