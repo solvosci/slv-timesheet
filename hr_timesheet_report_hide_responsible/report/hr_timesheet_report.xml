@@ -1,0 +1,28 @@
+<odoo>
+    <template id="report_timesheet_hide_responsible" inherit_id="hr_timesheet.report_timesheet">
+
+        <xpath expr="//t[@t-set='show_project']" position="after">
+            <t t-set="unique_user" t-value="len(docs.mapped('user_id')) == 1"/>
+            <t t-if="unique_user">
+                <t t-set="user_name" t-value="docs[0].user_id.partner_id.name"/>
+            </t>
+        </xpath>
+        
+        <xpath expr="//div[@class='page']/div/div/h2" position="after">
+            <h4 t-if="unique_user">Responsible: <span t-esc="user_name"></span></h4>
+        </xpath>
+
+        <xpath expr="//thead/tr/th[2]" position="attributes">
+            <attribute name="t-if">not unique_user</attribute>
+        </xpath>
+
+        <xpath expr="//tbody/tr[1]/td[2]" position="attributes">
+            <attribute name="t-if">not unique_user</attribute>
+        </xpath>
+
+        <xpath expr="//tbody/tr[2]/td[2]" position="attributes">
+            <attribute name="t-if">not unique_user</attribute>
+        </xpath>
+
+    </template>
+</odoo>
