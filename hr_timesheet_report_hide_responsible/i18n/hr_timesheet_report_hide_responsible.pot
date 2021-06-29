@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: hr_timesheet_report_hide_responsible
-#: model_terms:ir.ui.view,arch_db:hr_timesheet_report_hide_responsible.report_timesheet_hide_responsible_users
+#: model_terms:ir.ui.view,arch_db:hr_timesheet_report_hide_responsible.report_timesheet_hide_responsible
 msgid "Responsible:"
 msgstr ""
 
