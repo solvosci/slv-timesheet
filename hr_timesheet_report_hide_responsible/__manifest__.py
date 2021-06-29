@@ -6,7 +6,7 @@
         Adds a report that hides the responsible
         users column if there is only one.
     """,
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "license": "LGPL-3",
     "category": "Human Resources",
     "author": "Solvos",
