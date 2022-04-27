@@ -7,12 +7,13 @@
     """,
     "author": "Solvos",
     "license": "LGPL-3",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.0",
     "category": "Project",
     "website": "https://github.com/solvosci/slv-timesheet",
     "depends": ["hr_timesheet"],
     "data": [
         "views/hr_timesheet_views.xml",
+        "views/res_partner_views.xml",
     ],
     'installable': True,
 }
