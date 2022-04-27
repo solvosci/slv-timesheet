@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-13 13:41+0000\n"
-"PO-Revision-Date: 2022-04-13 13:41+0000\n"
+"POT-Creation-Date: 2022-04-27 08:21+0000\n"
+"PO-Revision-Date: 2022-04-27 08:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,17 +21,25 @@ msgid "Analytic Line"
 msgstr ""
 
 #. module: hr_timesheet_third_party
+#: model:ir.model,name:hr_timesheet_third_party.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: hr_timesheet_third_party
 #: model:ir.model.fields,field_description:hr_timesheet_third_party.field_account_analytic_line__display_name
+#: model:ir.model.fields,field_description:hr_timesheet_third_party.field_res_partner__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: hr_timesheet_third_party
 #: model:ir.model.fields,field_description:hr_timesheet_third_party.field_account_analytic_line__id
+#: model:ir.model.fields,field_description:hr_timesheet_third_party.field_res_partner__id
 msgid "ID"
 msgstr ""
 
 #. module: hr_timesheet_third_party
 #: model:ir.model.fields,field_description:hr_timesheet_third_party.field_account_analytic_line____last_update
+#: model:ir.model.fields,field_description:hr_timesheet_third_party.field_res_partner____last_update
 msgid "Last Modified on"
 msgstr ""
 
@@ -39,4 +47,22 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_timesheet_third_party.field_account_analytic_line__third_party_id
 #: model_terms:ir.ui.view,arch_db:hr_timesheet_third_party.view_hr_timesheet_line_inherit_search
 msgid "Third Party"
+msgstr ""
+
+#. module: hr_timesheet_third_party
+#: model:ir.model.fields,field_description:hr_timesheet_third_party.field_res_partner__third_party_unit_amount_total
+#: model:ir.model.fields,field_description:hr_timesheet_third_party.field_res_users__third_party_unit_amount_total
+msgid "Third Party Hours"
+msgstr ""
+
+#. module: hr_timesheet_third_party
+#: model:ir.model.fields,field_description:hr_timesheet_third_party.field_res_partner__third_party_timesheet_ids
+#: model:ir.model.fields,field_description:hr_timesheet_third_party.field_res_users__third_party_timesheet_ids
+msgid "Third Party Timesheet"
+msgstr ""
+
+#. module: hr_timesheet_third_party
+#: code:addons/hr_timesheet_third_party/models/res_partner.py:0
+#, python-format
+msgid "Timesheet Activities"
 msgstr ""

@@ -29,6 +29,7 @@
         <field name="inherit_id" ref="hr_timesheet.view_hr_timesheet_line_pivot" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="project_id" type="row" />
                 <field name="third_party_id" type="row" />
             </xpath>
             <xpath expr="//field[@name='employee_id']" position="attributes">
