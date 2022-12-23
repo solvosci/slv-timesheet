@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="account_analytic_line_inherit" inherit_id="hr_timesheet.report_timesheet">
+        <xpath expr="//t[@t-set='show_project']" position="after">
+            <t
+                t-set="invoice_name"
+                t-value="docs.sudo().get_invoice_name()"
+            />
+        </xpath>
+        <xpath expr="//h2/span" position="inside">
+            <t t-if="invoice_name">
+                in invoice #<t t-esc="invoice_name"/>
+            </t>
+        </xpath>
+    </template>
+</odoo>
