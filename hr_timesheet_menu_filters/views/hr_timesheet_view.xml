@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_timesheet.act_hr_timesheet_line" model="ir.actions.act_window">
+        <field name="context">{'search_default_this_week':1}</field>
+    </record>
+    <record model="ir.ui.view" id="account_analytic_line_menu_filters_search_view">
+        <field name="name">account.analytic.line.search.menu.filter</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date']" position="before">
+                <filter name="today" string="Today" domain="[('date', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                <filter name="yesterday" string="Yesterday" domain="[('date', '=', (context_today() - relativedelta(days=1)).strftime('%Y-%m-%d'))]"/>
+                <separator/>
+                <filter string="This Week" name="this_week" domain="[
+                ('date', '>=', (context_today() + relativedelta(weeks=-1,days=1,weekday=0)).strftime('%Y-%m-%d')),
+                ('date', '&lt;', (context_today() + relativedelta(days=1,weekday=0)).strftime('%Y-%m-%d'))]"/>
+                <filter string="Last Week" name="last_week" domain="[
+                ('date', '>=', (context_today() + relativedelta(weeks=-2,days=1,weekday=0)).strftime('%Y-%m-%d')),
+                ('date', '&lt;', (context_today() + relativedelta(weeks=-1,days=1,weekday=0)).strftime('%Y-%m-%d'))]"/>
+                <separator/>
+            </xpath>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="account_analytic_line_menu_filters_pivot_view">
+        <field name="name">account.analytic.line.pivot.menu.filter</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.view_my_timesheet_line_pivot" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='amount']" position="after">
+                <field name="date" type="row" interval="day"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
