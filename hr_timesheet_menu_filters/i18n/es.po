@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_timesheet_menu_filters
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-03 09:26+0000\n"
+"PO-Revision-Date: 2023-01-03 10:27+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#. module: hr_timesheet_menu_filters
+#: model:ir.model,name:hr_timesheet_menu_filters.model_account_analytic_line
+msgid "Analytic Line"
+msgstr ""
+
+#. module: hr_timesheet_menu_filters
+#: model_terms:ir.ui.view,arch_db:hr_timesheet_menu_filters.account_analytic_line_menu_filters_search_view
+msgid "Last Week"
+msgstr "Semana Anterior"
+
+#. module: hr_timesheet_menu_filters
+#: model_terms:ir.ui.view,arch_db:hr_timesheet_menu_filters.account_analytic_line_menu_filters_search_view
+msgid "This Week"
+msgstr "Esta Semana"
+
+#. module: hr_timesheet_menu_filters
+#: model_terms:ir.ui.view,arch_db:hr_timesheet_menu_filters.account_analytic_line_menu_filters_search_view
+msgid "Today"
+msgstr "Hoy"
+
+#. module: hr_timesheet_menu_filters
+#: model_terms:ir.ui.view,arch_db:hr_timesheet_menu_filters.account_analytic_line_menu_filters_search_view
+msgid "Yesterday"
+msgstr "Ayer"
