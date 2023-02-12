@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="hr_timesheet_line_tree">
+        <field name="name">account.analytic.line.tree.hr_timesheet (in hr_timesheet_percentage)</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree" />
+        <field name="arch" type="xml">
+            <field name="unit_amount" position="after">
+                <field
+                    name="timesheet_pct"
+                    optional="hide"
+                    widget="percentage"
+                    string="Pct."
+                />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_my_timesheet_line_pivot">
+        <field name="name">account.analytic.line.pivot (in hr_timesheet_percentage)</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.view_my_timesheet_line_pivot" />
+        <field name="arch" type="xml">
+            <field name="unit_amount" position="after">
+                <field
+                    name="timesheet_pct"
+                    widget="percentage"
+                    string="Pct."
+                />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_hr_timesheet_line_pivot">
+        <field name="name">account.analytic.line.pivot (in hr_timesheet_percentage)</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.view_hr_timesheet_line_pivot" />
+        <field name="arch" type="xml">
+            <field name="unit_amount" position="after">
+                <field
+                    name="timesheet_pct"
+                    widget="percentage"
+                    string="Pct."
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
