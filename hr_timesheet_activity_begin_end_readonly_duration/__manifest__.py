@@ -12,6 +12,6 @@
     "category": "Project",
     "website": "https://github.com/solvosci/slv-timesheet",
     "depends": ["hr_timesheet_activity_begin_end"],
-    "data": [],
+    "data": ["views/hr_timesheet_views.xml"],
     'installable': True,
 }
