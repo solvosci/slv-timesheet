@@ -1,15 +1,12 @@
 <odoo>
-    <template id="report_timesheet_not_valued_1" inherit_id="hr_timesheet.report_timesheet">
+    <template id="report_timesheet_not_valued_1" inherit_id="hr_timesheet.timesheet_table">
         <xpath expr="//th[@class='text-right']" position="attributes">
             <attribute name="t-if">not not_valued</attribute>
         </xpath>
         <xpath expr="//tbody/tr[1]/td[@class='text-right']" position="attributes">
             <attribute name="t-if">not not_valued</attribute>
         </xpath>
-        <xpath expr="//tbody/tr[2]/td[@class='text-right']" position="attributes">
-            <attribute name="t-if">not not_valued</attribute>
-        </xpath>
-        <xpath expr="//tbody/tr[2]/td[@class='text-right'][2]" position="attributes">
+        <xpath expr="//tbody/tr[2]/td[@class='text-right']/strong[2]" position="attributes">
             <attribute name="t-if">not not_valued</attribute>
         </xpath>
     </template>
@@ -19,11 +16,13 @@
         <t t-call="hr_timesheet.report_timesheet"/>
     </template>
 
-    <report id="timesheet_not_valued_report"
-            model="account.analytic.line"
-            string="Timesheet Entries Not Valued"
-            report_type="qweb-pdf"
-            name="hr_timesheet_report_not_valued.report_timesheet_not_valued"
-            file="report_timesheet"
-    />
+    <record id="timesheet_not_valued_report" model="ir.actions.report">
+        <field name="name">Timesheet Entries Not Valued</field>
+        <field name="model">account.analytic.line</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_timesheet_report_not_valued.report_timesheet_not_valued</field>
+        <field name="report_file">report_timesheet</field>
+        <field name="binding_model_id" ref="hr_timesheet.model_account_analytic_line"/>
+        <field name="binding_view_types">list,form</field>
+    </record>
 </odoo>
