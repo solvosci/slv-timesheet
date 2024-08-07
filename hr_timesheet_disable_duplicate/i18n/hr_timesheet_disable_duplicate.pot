@@ -1,0 +1,27 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_timesheet_disable_duplicate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-07 11:02+0000\n"
+"PO-Revision-Date: 2024-08-07 11:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_timesheet_disable_duplicate
+#: model:ir.model,name:hr_timesheet_disable_duplicate.model_account_analytic_line
+msgid "Analytic Line"
+msgstr ""
+
+#. module: hr_timesheet_disable_duplicate
+#: code:addons/hr_timesheet_disable_duplicate/models/account_analytic_line.py:0
+#, python-format
+msgid "You cannot duplicate timesheet"
+msgstr ""
