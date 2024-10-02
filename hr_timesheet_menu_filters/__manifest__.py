@@ -5,7 +5,7 @@
     "name": "Add filters timesheet",
     "description": "Add new filters to search view",
     "category": "Services/Timesheets",
-    "version": "15.0.1.1.0",
+    "version": "17.0.1.0.0",
     "depends": ["hr_timesheet"],
     "data": [
         "views/hr_timesheet_view.xml",
