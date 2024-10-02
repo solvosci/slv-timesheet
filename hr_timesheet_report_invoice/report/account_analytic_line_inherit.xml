@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="account_analytic_line_inherit" inherit_id="hr_timesheet.report_timesheet">
         <xpath expr="//t[@t-set='show_project']" position="after">

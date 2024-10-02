@@ -5,7 +5,7 @@
     "name": "Timesheet Report - invoice name on header",
     "description": "Adds invoice name to header of timesheets report",
     "category": "Services/Timesheets",
-    "version": "15.0.1.0.0",
+    "version": "17.0.1.0.0",
     "depends": ["sale_timesheet"],
     "data": [
         "report/account_analytic_line_inherit.xml"
