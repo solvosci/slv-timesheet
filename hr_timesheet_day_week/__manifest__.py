@@ -5,7 +5,7 @@
     "name": "Add day of week management to timesheets",
     "description": "Add day of week management to timesheets",
     "category": "Services/Timesheets",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "depends": ["hr_timesheet"],
     "data": [
         "views/hr_timesheet_view.xml",
