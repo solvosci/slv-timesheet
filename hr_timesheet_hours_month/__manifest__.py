@@ -5,7 +5,7 @@
     "summary": """
         Adds if a project has planned monthly hours.
     """,
-    "version": "15.0.1.0.0",
+    "version": "17.0.1.0.0",
     "license": "LGPL-3",
     "category": "Human Resources",
     "author": "Solvos",

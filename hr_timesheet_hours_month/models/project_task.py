@@ -15,7 +15,7 @@ class ProjectTask(models.Model):
         n_month = fields.Date.today().month
         for record in self:
             if record.planned_hours_year:
-                record.remaining_hours_month = record.remaining_hours - (record.planned_hours - (n_month * (record.planned_hours / 12)))
+                record.remaining_hours_month = record.remaining_hours - (record.allocated_hours - (n_month * (record.allocated_hours / 12)))
             else:
                 record.remaining_hours_month = 0.0
     
