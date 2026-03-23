@@ -13,5 +13,5 @@
     "author": "Solvos Consultoría Informática",
     "website": "https://github.com/solvosci/slv-timesheet",
     "license": "LGPL-3",
-    "installable": True,
+    "installable": False,
 }
