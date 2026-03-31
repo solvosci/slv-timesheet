@@ -1,0 +1,50 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_timesheet_hours_month
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-16 16:37+0000\n"
+"PO-Revision-Date: 2024-01-16 17:39+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4\n"
+
+#. module: hr_timesheet_hours_month
+#: code:addons/hr_timesheet_hours_month/models/project_task.py:0
+#, python-format
+msgid "(%(sign)s%(hours)s:%(minutes)s monthly)"
+msgstr "(%(sign)s%(hours)s:%(minutes)s mensuales)"
+
+#. module: hr_timesheet_hours_month
+#: model:ir.model.fields,field_description:hr_timesheet_hours_month.field_project_task__planned_hours_year
+msgid "Planned Hours Year"
+msgstr "Horas planificadas al año"
+
+#. module: hr_timesheet_hours_month
+#: model_terms:ir.ui.view,arch_db:hr_timesheet_hours_month.view_project_task_filter
+#: model_terms:ir.ui.view,arch_db:hr_timesheet_hours_month.view_project_task_form
+msgid "Planned hours to year"
+msgstr "Horas planificadas al año"
+
+#. module: hr_timesheet_hours_month
+#: model:ir.model.fields,field_description:hr_timesheet_hours_month.field_project_task__remaining_hours_month
+msgid "Remaining Hours Month"
+msgstr "Horas restantes a hacer este mes"
+
+#. module: hr_timesheet_hours_month
+#: model_terms:ir.ui.view,arch_db:hr_timesheet_hours_month.view_project_task_form
+msgid "Remaining hours month"
+msgstr "Horas restantes a hacer este mes"
+
+#. module: hr_timesheet_hours_month
+#: model:ir.model,name:hr_timesheet_hours_month.model_project_task
+msgid "Task"
+msgstr "Tarea"
